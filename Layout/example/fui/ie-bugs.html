@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+<link href="ui/css/base/reset.css" rel="stylesheet" type="text/css" />
+<link href="ui/css/base/general.css" rel="stylesheet" type="text/css" />
+
+<link href="ui/css/iebugs.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 8]><link href="ui/css/iebugs-ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+<!--[if lt IE 7]><script type="text/javascript" src="ui/js/fixie.js"></script><![endif]-->
+
+<title>IE Bugs</title>
+</head>
+
+<body>
+
+	<div class="body">
+		<h1>IE Bugs</h1>
+		
+		<h2>Double margin:</h2>
+		<div class="doubleMarginWraper clearfix">
+			<h3>Bug:</h3>
+			<div class="doubleMargin"><!-- --></div>
+		</div><!-- .doubleMarginWraper -->
+		
+		<div class="doubleMarginWraper clearfix">
+			<h3>Fix:</h3>
+			<div class="doubleMargin doubleMarginFix"><!-- --></div>
+		</div><!-- .doubleMarginWraper -->
+		
+		<h2>min- and max-widht:</h2>
+		<div class="minAndMaxWidth">
+			Min and Max width
+		</div><!-- .minAndMaxWidth -->
+		
+		<h2>max-height:</h2>
+		<div class="maxHeight">
+			Conetent<br /><br />
+			Conetent<br /><br />
+			Conetent<br /><br />
+			Conetent<br /><br />
+			Conetent<br /><br />
+			Conetent<br /><br />
+			Conetent<br /><br />
+			Conetent<br /><br />
+			Conetent<br /><br />
+			Conetent<br /><br />
+			Conetent<br /><br />
+		</div><!-- .maxHeight -->
+		
+		<h2>Odd size absolute:</h2>
+		<h3>Bug:</h3>
+		<div class="oddSizeAbsolute oddSizeAbsoluteBug">
+			<div class="t-r"><!-- --></div>
+			<div class="b-r"><!-- --></div>
+		</div><!-- .oddSizeAbsolute -->
+		
+		<h3>Fix 1:</h3>
+		<div class="oddSizeAbsolute oddSizeAbsoluteBug oddSizeAbsoluteFix1">
+			<div class="t-r"><!-- --></div>
+			<div class="b-r"><!-- --></div>
+		</div><!-- .oddSizeAbsolute -->
+		
+		<h3>Fix 2:</h3>
+		<div class="oddSizeAbsolute oddSizeAbsoluteFix2">
+			<div class="oddSizeWraper">
+				Conetent<br /><br />
+				Conetent<br /><br />
+				Conetent<br /><br />
+				Conetent<br /><br />
+				Conetent
+			</div>
+			<div class="t-r"><!-- --></div>
+			<div class="b-r"><!-- --></div>
+		</div><!-- .oddSizeAbsolute -->
+		
+		<h2>Odd size float:</h2>
+		<h3>Bug:</h3>
+		<div class="oddSizeFloat clearfix">
+			<div class="left-col">Left</div>
+			<div class="right-col">Right</div>
+		</div><!-- .oddSizeFloat -->
+		
+		<h3>Fix:</h3>
+		<div class="oddSizeFloat oddSizeFloatFix clearfix">
+			<div class="left-col">Left</div>
+			<div class="right-col">Right</div>
+		</div><!-- .oddSizeFloat -->
+		
+		<h2>Space between list:</h2>
+		<div class="clearfix">
+			<div class="column">
+				<h3>Bug:</h3>
+				<ul class="spaceBetweenList">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+				</ul>
+			</div><!-- .column -->
+			<div class="column">
+				<h3>Fix:</h3>
+				<ul class="spaceBetweenList spaceBetweenListFix">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+				</ul>
+			</div><!-- .column -->
+		</div>
+		
+		<h2>Double Conten</h2>
+		<h3>Bug:</h3>
+		<div class="doubleConten clearfix">
+			<div class="firstFloat">First float</div>
+			
+			<!-- comment --> <!-- comment --> <!-- comment --> <!-- comment --> <!-- comment -->
+			<!-- comment --> <!-- comment --> <!-- comment --> <!-- comment --> <!-- comment -->
+			<!-- comment --> <!-- comment --> <!-- comment --> <!-- comment --> <!-- comment -->
+			
+			<!-- comment --> <!-- comment --> <!-- comment --> <!-- comment --> <!-- comment -->
+			<!-- comment --> <!-- comment --> <!-- comment --> <!-- comment --> <!-- comment -->
+			<!-- comment --> <!-- comment --> <!-- comment --> <!-- comment --> <!-- comment -->
+			<!-- comment --> <!-- comment --> <!-- comment --> <!-- comment --> <!-- comment -->
+			
+			<!-- comment --> <!-- comment --> <!-- comment --> <!-- comment --> <!-- comment -->
+			<!-- comment --> <!-- comment --> <!-- comment --> <!-- comment --> <!-- comment -->
+			<!-- comment --> <!-- comment --> <!-- comment --> <!-- comment --> <!-- comment -->
+			
+			<div class="secondFloat">
+				If you look at the source of this page, you will see 50 ordinary HTML comments in between the two floats. The first one is "free," but each of the remaining comments will trigger the replication of two characters from the last float.
+				<br />
+				<a href="#">Test link</a>
+			</div>			
+		</div><!-- .doubleConten -->
+		
+		<h3>Fix:</h3>
+		<div class="doubleConten clearfix">
+			<div class="firstFloat">First float</div>			
+			<div class="secondFloat">
+				If you look at the source of this page, you will see 50 ordinary HTML comments in between the two floats. The first one is "free," but each of the remaining comments will trigger the replication of two characters from the last float.
+				<br />
+				<a href="#">Test link</a>
+			</div>			
+		</div><!-- .doubleConten -->
+		
+		<h2>PNG 24</h2>
+		<h3>&lt;img /&gt;</h3>
+			<div>
+			<img src="ui/pic/png24.png" class="iepng" width="260" height="210" alt="" />
+		</div>
+	
+		<h3>Crop</h3>
+		<div class="testCrop">
+			<div>
+				Text Text Text Text Text Text Text 
+				<br /><br /><br /><br />
+				Text Text Text Text Text Text Text 
+				<br /><br /><br /><br />
+				<a href="#">Link</a>
+			</div>
+		</div><!-- .testCrop -->
+		
+		<h3>Scale</h3>
+		<div class="testScale">
+			<div>
+				Text Text Text Text Text Text Text 
+				<br /><br /><br /><br />
+				Text Text Text Text Text Text Text 
+				<br /><br /><br /><br />
+				<a href="#">Link</a>
+			</div>
+		</div><!-- .testScale -->
+		
+	</div><!-- .body -->
+
+</body>
+</html>

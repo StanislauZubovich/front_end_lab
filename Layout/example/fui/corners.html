@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+<link href="ui/css/base/reset.css" rel="stylesheet" type="text/css" />
+<link href="ui/css/base/general.css" rel="stylesheet" type="text/css" />
+
+<link href="ui/css/corners.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 8]><link href="ui/css/corners-ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+<!--[if lt IE 7]><script type="text/javascript" src="ui/js/fixie.js"></script><![endif]-->
+
+<title>Corners</title>
+</head>
+
+<body>
+
+	<div class="body">
+		<h1>Закруглённые углы</h1>
+		<h2>Фиксированной ширины <i>(если ширина блока фиксированная, то код значительно упрощается)</i> :</h2>
+		<h3>С бордюром:</h3>
+		<div class="item">
+			<div class="fixedBorder">
+				<div class="topBg">
+					<div class="bottomBg">
+						Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+					</div>
+				</div>
+			</div><!-- .fixedBorder -->
+		</div><!-- .item -->
+		
+		<h3>С бордюром, прозрачные углы:</h3>
+		<div class="itemBg">
+			<div class="fixedBorderTransparent">
+				<div class="bottomBg">
+					<div class="contentBlock">
+						Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+					</div>
+				</div>
+			</div><!-- .fixedBorderTransparent -->
+		</div><!-- .itemBg -->
+		
+		<h3>Сплошной:</h3>
+		<div class="item">
+			<div class="fixedSolid">
+				<div class="contentBlock">
+					Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+				</div>
+			</div><!-- .fixedSolid -->
+		</div><!-- .item -->
+		
+		<h3>Сплошной, прозрачные углы:</h3>
+		<div class="itemBg">
+			<div class="fixedSolidTransparent">
+				<div class="bottomBg">
+					<div class="contentBlock">
+						Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+					</div>
+				</div>
+			</div><!-- .fixedSolidTransparent -->
+		</div><!-- .itemBg -->
+		
+		<h3>Прозрачные углы png24 с помощью пустых дивов:</h3>
+		<div class="itemBg">
+			<div class="fixedSolid24">
+				<div class="topBg"><!-- --></div>
+				<div class="contentBlock">
+					Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+				</div>
+				<div class="bottomBg"><!-- --></div>				
+			</div><!-- .fixedSolid24 -->
+		</div><!-- .itemBg -->
+		
+		<div class="itemBg">
+			<div class="fixedShadow">
+				<div class="topBg"><!-- --></div>
+				<div class="centerBg">
+					<div class="contentBlock">
+						Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+					</div>
+				</div>
+				<div class="bottomBg"><!-- --></div>				
+			</div><!-- .fixedShadow -->
+		</div><!-- .itemBg -->
+		
+		<h2>Тянущиеся <i>(можно указать ширину и сделать в любой момент фиксированной ширины)</i> :</h2>
+		<h3>С бордюром, вложенные дивы <i>(тоже самое для сплошного блока, только без учёта размера бордюра и без дива обёртки задающего границу)</i> :</h3>
+		<div class="item">
+			<div class="stretchyBorderNested">
+				<div class="t-l">
+					<div class="t-r">
+						<div class="b-l">
+							<div class="b-r">
+								Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- .stretchyBorderNested -->
+		</div><!-- .item -->
+		
+		<h3>С бордюром, частично вложенные дивы <i>(тоже самое для сплошного блока, только без учёта размера бордюра и без дива обёртки задающего границу)</i> :</h3>
+		<div class="item">
+			<div class="stretchyBorderNested2">
+				<div class="t-l"><div class="t-r"><!-- --></div></div>
+				Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+				<div class="b-l"><div class="b-r"><!-- --></div></div>
+			</div><!-- .stretchyBorderNested -->
+		</div><!-- .item -->
+		
+		<h3>С бордюром, 4 пустых дива <i>(тоже самое для сплошного блока, только без учёта размера бордюра)</i> :</h3>
+		<div class="item">
+			<div class="stretchyBorderCircle">
+				<div class="contentBlock">
+					Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+				</div>
+				<div class="t-l"><!-- --></div>
+				<div class="t-r"><!-- --></div>
+				<div class="b-l"><!-- --></div>
+				<div class="b-r"><!-- --></div>
+			</div><!-- .stretchyBorderNested -->
+		</div><!-- .item -->
+		
+		<h3>Звезда:</h3>
+		<div class="itemBg">
+			<div class="star">
+				<div class="starWraper">
+					<div class="starContent">
+						Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+					</div>
+					<div class="t-l"><!-- --></div>
+					<div class="t-r"><!-- --></div>
+				</div>
+				<div class="b-l"><!-- --></div>
+				<div class="b-r"><!-- --></div>
+			</div><!-- .star -->
+		</div><!-- .itemBg -->
+		
+		<h3>Куб:</h3>
+		<div class="itemBg">
+			<div class="cube">
+				<div class="t-l">
+					<div class="cubeWraper">
+						<div class="cubeContent">
+							Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+						</div>
+						<div class="b-r"><!-- --></div>
+					</div>
+				</div>
+				<div class="t-r"><!-- --></div>
+				<div class="b-l"><!-- --></div>
+			</div><!-- .cube -->
+		</div><!-- .itemBg -->
+		
+		<h3>Круг:</h3>
+		<div class="itemBg">
+			<div class="circle">
+				<div class="circleWraper">
+					<div class="circleContent">
+						<div class="circleContentBg">
+							Content<br /><br /><br /><br /><br /><br /><br /><br />Content
+						</div>
+						<div class="l"><!-- --></div>
+						<div class="r"><!-- --></div>
+					</div>
+					<div class="t-l"><div><!-- --></div></div>
+					<div class="t-r"><div><!-- --></div></div>
+					<div class="b-l"><div><!-- --></div></div>
+					<div class="b-r"><div><!-- --></div></div>
+					
+					<div class="t"><!-- --></div>
+					<div class="b"><!-- --></div>
+				</div>
+			</div>
+		</div><!-- .itemBg -->
+
+	</div><!-- .body -->
+
+</body>
+</html>
